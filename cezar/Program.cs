@@ -1,4 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+// See https://aka.ms/new-console-template for more information
 
 using System;
 using System.Collections.Generic;
@@ -12,10 +12,14 @@ namespace cezar
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Podaj fraze");
+           
+            Console.WriteLine("podaj klucz przesunięcia");
+            int przesuniecie = int.Parse(Console.ReadLine());
+Console.WriteLine("Podaj fraze");
             foreach (var c in Console.ReadLine())
             {
-                Console.Write(Convert.ToChar((c - 'a' + 3) % ('z' - 'a' + 3) + 'a'));
+         
+                Console.Write(Convert.ToChar((c - 'a' + przesuniecie) % ('z' - 'a' + przesuniecie) + 'a'));
             }
             Console.WriteLine();
             Console.ReadKey(true);
