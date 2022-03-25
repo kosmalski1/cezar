@@ -1,9 +1,6 @@
 // See https://aka.ms/new-console-template for more information
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
 
 namespace cezar
 
@@ -12,17 +9,35 @@ namespace cezar
     {
         static void Main(string[] args)
         {
-           
+            bool aa;
             Console.WriteLine("podaj klucz przesunięcia");
-            int przesuniecie = int.Parse(Console.ReadLine());
-Console.WriteLine("Podaj fraze");
-            foreach (var c in Console.ReadLine())
+            int przesuniecie = Int32.Parse(Console.ReadLine());
+Console.WriteLine("Podaj fraze"); 
+            string fraza = Console.ReadLine();
+            char[] tablica = fraza.ToCharArray();
+            for (int i = 0; i < tablica.Length;i++)
             {
-         
-                Console.Write(Convert.ToChar((c - 'a' + przesuniecie) % ('z' - 'a' + przesuniecie) + 'a'));
+                tablica[i] =(char)((char)tablica[i] + przesuniecie);
+                aa = Char.IsUpper(tablica[i]);
+                if(aa == true) { 
+                
+                    
+
+                }
+                else
+                {
+ tablica[i] = (char)((char)tablica[i] + przesuniecie -2);
+                }
+
+
+
+               
+
+
+                
             }
-            Console.WriteLine();
-            Console.ReadKey(true);
+            string charsStr = new string(tablica);
+            Console.WriteLine(charsStr);
         }
     }
 }
