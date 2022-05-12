@@ -1,4 +1,3 @@
-// See https://aka.ms/new-console-template for more information
 namespace cezar
 
 {
@@ -16,21 +15,26 @@ namespace cezar
             {
                 tablica[i] = (char)((char)tablica[i] + przesuniecie);
                 aa = Char.IsUpper(tablica[i]);
-                if (tablica[i] >= 91)
-                {
-                    tablica[i] = (char)((char)tablica[i] - 26); }
+              
                 if (aa == true)
                 {
-
-
+                   
+ if (tablica[i] >= 91)
+                {
+                    tablica[i] = (char)((char)tablica[i] - 26);
+}
 
                 }
                 else
                 {
-                    tablica[i] = (char)((char)tablica[i] + przesuniecie - 2);
+                    if (tablica[i] >= 123)
+                    {
+                        tablica[i] = (char)((char)tablica[i] - 26);
+                    }
                 }
 
-
+ 
+                
 
 
 
